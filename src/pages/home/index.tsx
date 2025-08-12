@@ -8,6 +8,7 @@ import Header from '@/components/layout/header'
 import Footer from '@/components/layout/footer';
 import { customJSONStringify } from '@/utilities/alert-utils';
 import WeekSelection from '@/components/home/week-selection';
+import ChatFloatButton from '@/components/chatbot/float-button';
 
 export const Home = () => {
   const [courseList, setCourseList] = useState<Course[]>([]);
@@ -127,6 +128,7 @@ export const Home = () => {
           {selectedWeek && <TimeTable courses={weekList[parseInt(selectedWeek.split('-')[1], 10) - 1]} />}
         </ConfigProvider>
       </div>
+      <ChatFloatButton/>
       <Footer />
     </>
   );

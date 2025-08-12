@@ -40,7 +40,7 @@ function mapObject(parseData: string[]): Course[] {
         const isActive = false;
         const startPeriod: number[] = [];
         for (let i = 0; i < startPeriodString.length; i++) {
-            if (startPeriodString[i] !== '-') {
+            if (startPeriodString[i] !== '-' || startPeriodString[i] !== '_') {
                 startPeriod.push(i + 1);
             }
         }
